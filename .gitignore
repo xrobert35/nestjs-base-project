@@ -1,0 +1,7 @@
+.idea
+bower_components
+node_modules/
+.tmp/
+dist
+npm-debug.log
+/_linux 
