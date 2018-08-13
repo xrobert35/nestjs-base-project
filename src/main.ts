@@ -16,7 +16,7 @@ async function bootstrap() {
     const packageJson = require('../package.json');
 
     const options = new DocumentBuilder()
-      .setTitle('Inexys API')
+      .setTitle('Base API')
       .setDescription(packageJson.description)
       .setVersion(packageJson.version)
       .setBasePath(Config.get().SERVER_PATH)
