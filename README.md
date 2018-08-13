@@ -12,27 +12,17 @@ $ npm install
 
 ## Running the app
 
-```bash
-# development
-$ npm run start
+You can run this project using vscode configuration or using package.json scripts
 
-# watch mode
-$ npm run start:dev
+#### Script package.json
 
-# production mode
-npm run start:prod
-```
-
-## Test
-
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
-
+| Commande   | Description    |
+| ------------ | ------------ |
+| start  |  Launch the project with default config |
+| start  |  Launch the project with development config |
+| start:prod | Launch the builded project  |
+| lint | Launch and fix possible tslint |
+| build  | Build the project  |
+| test | Launch all jest test
+| test:unit |  Launch jest unit test |
+| test:e2e |  Launch jest e2e test |

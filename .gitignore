@@ -4,4 +4,5 @@ node_modules/
 .tmp/
 dist
 npm-debug.log
-/_linux 
+/_linux
+coverage/

@@ -4,7 +4,8 @@
     "tslint:recommended"
   ],
   "jsRules": {
-    "no-unused-expression": true
+    "no-unused-expression": true,
+    "object-literal-sort-keys": false
   },
   "rules": {
     "no-var-requires" : false,

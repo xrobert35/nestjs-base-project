@@ -5,6 +5,45 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "name": "Launch server",
+      "type": "node",
+      "request": "launch",
+      "args": [
+        "${workspaceFolder}/src/main.ts"
+      ],
+      "runtimeArgs": [
+        "-r",
+        "ts-node/register"
+      ],
+      "outputCapture": "std",
+      "cwd": "${workspaceFolder}",
+      "protocol": "inspector",
+      "env": {
+        "NODE_ENV": "development"
+      }
+    },
+    {
+      "name": "Launch all test",
+      "type": "node",
+      "request": "launch",
+      "env": {
+        "NODE_ENV": "test"
+      },
+      "runtimeArgs": [
+        "--nolazy"
+      ],
+      "args": [
+        "--colors",
+        "--config=${workspaceFolder}/jest-global.config.js",
+        "--runInBand"
+      ],
+      "windows": {
+        "program": "${workspaceFolder}/node_modules/jest/bin/jest",
+      },
+      "outputCapture": "std",
+      "internalConsoleOptions": "openOnSessionStart"
+    },
+    {
       "name": "Launch test unitaire",
       "type": "node",
       "request": "launch",
@@ -13,6 +52,11 @@
       },
       "runtimeArgs": [
         "--nolazy"
+      ],
+      "args": [
+        "--colors",
+        "--config=${workspaceFolder}/jest.config.js",
+        "--runInBand"
       ],
       "windows": {
         "program": "${workspaceFolder}/node_modules/jest/bin/jest",
@@ -28,7 +72,8 @@
         "NODE_ENV": "test"
       },
       "args": [
-        "--config=test/jest-e2e.json",
+        "--colors",
+        "--config=${workspaceFolder}/jest-e2e.config.js",
         "--runInBand"
       ],
       "runtimeArgs": [
@@ -39,25 +84,6 @@
       },
       "outputCapture": "std",
       "internalConsoleOptions": "openOnSessionStart"
-    },
-    {
-      "name": "Launch server",
-      "type": "node",
-      "request": "launch",
-      "args": [
-        "${workspaceFolder}/src/main.ts"
-      ],
-      "runtimeArgs": [
-        "-r",
-        "ts-node/register"
-      ],
-      "outputCapture": "std",
-      "cwd": "${workspaceFolder}",
-      "protocol": "inspector",
-      "env": {
-        "NODE_ENV": "development",
-        "MONGO_URL" : "192.168.56.130:9200",
-      }
     }
   ]
 }
